@@ -1,13 +1,19 @@
 {
-  "license": "ISC",
+  "license": "MIT",
+  "name": "anchor_vault",
+  "version": "0.1.0",
+  "description": "Created with Anchor",
+  "type": "module",
   "scripts": {
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
     "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check"
+    
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.32.1"
   },
   "devDependencies": {
+    
     "@types/bn.js": "^5.1.0",
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.0.0",
