@@ -1,0 +1,885 @@
+anchor test
+   Compiling anchor_vault v0.1.0 (/home/orkhanelite/turbine/pre-builder/v1/solana-starter-fork/anchor_temp_test/anchor_vault/programs/anchor_vault)
+warning: type `error_code` should have an upper camel case name
+ --> programs/anchor_vault/src/error.rs:4:10
+  |
+4 | pub enum error_code {
+  |          ^^^^^^^^^^ help: convert the identifier to upper camel case: `ErrorCode`
+  |
+  = note: `#[warn(non_camel_case_types)]` on by default
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:18:22
+   |
+18 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:18:22
+   |
+18 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:18:22
+   |
+18 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+   |
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:21:22
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:21:22
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:21:22
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+   |
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:21:22
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:21:22
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:21:22
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+   |
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+  |
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+ --> programs/anchor_vault/src/lib.rs:12:1
+  |
+12+ #[derive(Clone)]
+13| pub struct VaultState {
+  |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::Owner` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `anchor_lang::Owner` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::Owner`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            initialize::VaultState
+            instruction::Close
+            instruction::Deposit
+            instruction::Initialize
+            instruction::Withdraw
+  = note: required for `anchor_lang::prelude::Account<'_, VaultState>` to implement `anchor_lang::Accounts<'_, CloseBumps>`
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: the method `key` exists for struct `Account<'_, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:13:50
+   |
+13 |     #[account(mut, seeds=[VAULT_SEED,vault_state.key().as_ref()], bump)]
+   |                                                  ^^^ method cannot be called on `Account<'_, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `key` exists for struct `Account<'_, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:6:14
+   |
+6  |     #[derive(Accounts)]
+   |              ^^^^^^^^ method cannot be called on `Account<'_, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:18:9
+   |
+18 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:18:9
+   |
+18 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:18:9
+   |
+18 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+   |
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `to_account_infos` exists for struct `Account<'info, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:6:14
+   |
+6  |     #[derive(Accounts)]
+   |              ^^^^^^^^ method cannot be called on `Account<'info, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `to_account_metas` exists for struct `Account<'info, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/close.rs:6:14
+   |
+6  |     #[derive(Accounts)]
+   |              ^^^^^^^^ method cannot be called on `Account<'info, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+  = note: required for `anchor_lang::prelude::Account<'info, VaultState>` to implement `anchor_lang::ToAccountMetas`
+note: required by a bound in `anchor_lang::AccountsExit::exit`
+ --> src/lib.rs:235:5
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+  = note: required for `anchor_lang::prelude::Account<'info, VaultState>` to implement `anchor_lang::ToAccountMetas`
+note: required by a bound in `anchor_lang::AccountsExit::exit`
+ --> src/lib.rs:235:5
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+  |
+  = help: the trait `anchor_lang::ToAccountMetas` is implemented for `anchor_lang::prelude::Account<'_, T>`
+  = note: required for `anchor_lang::prelude::Account<'info, VaultState>` to implement `anchor_lang::ToAccountMetas`
+note: required by a bound in `anchor_lang::AccountsExit::exit`
+ --> src/lib.rs:235:5
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+ --> programs/anchor_vault/src/lib.rs:12:1
+  |
+12+ #[derive(Clone)]
+13| pub struct VaultState {
+  |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::Owner` is not satisfied
+ --> programs/anchor_vault/src/instructions/close.rs:6:14
+  |
+6 |     #[derive(Accounts)]
+  |              ^^^^^^^^ the trait `anchor_lang::Owner` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::Owner`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            initialize::VaultState
+            instruction::Close
+            instruction::Deposit
+            instruction::Initialize
+            instruction::Withdraw
+  = note: required for `anchor_lang::prelude::Account<'info, VaultState>` to implement `anchor_lang::AccountsExit<'_>`
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+ --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+  |
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+ --> programs/anchor_vault/src/lib.rs:12:1
+  |
+12+ #[derive(Clone)]
+13| pub struct VaultState {
+  |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::Owner` is not satisfied
+ --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `anchor_lang::Owner` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::Owner`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            initialize::VaultState
+            instruction::Close
+            instruction::Deposit
+            instruction::Initialize
+            instruction::Withdraw
+  = note: required for `anchor_lang::prelude::Account<'_, VaultState>` to implement `anchor_lang::Accounts<'_, DepositBumps>`
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: the method `key` exists for struct `Account<'_, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:16:53
+   |
+16 | ...= [VAULT_SEED, vault_state.key().as_ref()], bump )]
+   |                               ^^^ method cannot be called on `Account<'_, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `key` exists for struct `Account<'_, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+   |
+8  | #[derive(Accounts)]
+   |          ^^^^^^^^ method cannot be called on `Account<'_, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:21:9
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:21:9
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:21:9
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+   |
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `to_account_infos` exists for struct `Account<'info, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+   |
+8  | #[derive(Accounts)]
+   |          ^^^^^^^^ method cannot be called on `Account<'info, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `to_account_metas` exists for struct `Account<'info, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/deposit.rs:8:10
+   |
+8  | #[derive(Accounts)]
+   |          ^^^^^^^^ method cannot be called on `Account<'info, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+  |
+7 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+ --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+  |
+7 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            anchor_lang::idl::IdlAccount
+            initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+ --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+  |
+7 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+  |
+note: required by a bound in `anchor_lang::prelude::Account`
+ --> src/accounts/account.rs:227:1
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+ --> programs/anchor_vault/src/lib.rs:12:1
+  |
+12+ #[derive(Clone)]
+13| pub struct VaultState {
+  |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::Owner` is not satisfied
+ --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+  |
+7 | #[derive(Accounts)]
+  |          ^^^^^^^^ the trait `anchor_lang::Owner` is not implemented for `VaultState`
+  |
+  = help: the following other types implement trait `anchor_lang::Owner`:
+            UpgradeableLoaderState
+            __idl::IdlAccount
+            anchor_lang::ProgramData
+            initialize::VaultState
+            instruction::Close
+            instruction::Deposit
+            instruction::Initialize
+            instruction::Withdraw
+  = note: required for `anchor_lang::prelude::Account<'_, VaultState>` to implement `anchor_lang::Accounts<'_, WithdrawBumps>`
+  = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: the method `key` exists for struct `Account<'_, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:15:52
+   |
+15 |     #[account( mut, seeds=[VAULT_SEED, vault_state.key().as_ref()], bump )]
+   |                                                    ^^^ method cannot be called on `Account<'_, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `key` exists for struct `Account<'_, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+   |
+7  | #[derive(Accounts)]
+   |          ^^^^^^^^ method cannot be called on `Account<'_, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'_, VaultState>: anchor_lang::Key`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountSerialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:21:9
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `anchor_lang::AccountSerialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountSerialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: anchor_lang::AccountDeserialize` is not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:21:9
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `anchor_lang::AccountDeserialize` is not implemented for `VaultState`
+   |
+   = help: the following other types implement trait `anchor_lang::AccountDeserialize`:
+             UpgradeableLoaderState
+             __idl::IdlAccount
+             anchor_lang::ProgramData
+             anchor_lang::idl::IdlAccount
+             initialize::VaultState
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+
+error[E0277]: the trait bound `VaultState: Clone` is not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:21:9
+   |
+21 |     pub vault_state: Account<'info, VaultState>,
+   |         ^^^^^^^^^^^ the trait `Clone` is not implemented for `VaultState`
+   |
+note: required by a bound in `anchor_lang::prelude::Account`
+  --> src/accounts/account.rs:227:1
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `to_account_infos` exists for struct `Account<'info, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+   |
+7  | #[derive(Accounts)]
+   |          ^^^^^^^^ method cannot be called on `Account<'info, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountInfos<'_>`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+error[E0599]: the method `to_account_metas` exists for struct `Account<'info, VaultState>`, but its trait bounds were not satisfied
+  --> programs/anchor_vault/src/instructions/withdraw.rs:7:10
+   |
+7  | #[derive(Accounts)]
+   |          ^^^^^^^^ method cannot be called on `Account<'info, VaultState>` due to unsatisfied trait bounds
+   |
+  ::: programs/anchor_vault/src/lib.rs:12:1
+   |
+12 | pub struct VaultState {
+   | --------------------- doesn't satisfy `VaultState: Clone`, `VaultState: anchor_lang::AccountDeserialize` or `VaultState: anchor_lang::AccountSerialize`
+   |
+   = note: the following trait bounds were not satisfied:
+           `VaultState: anchor_lang::AccountSerialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+           `VaultState: anchor_lang::AccountDeserialize`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+           `VaultState: Clone`
+           which is required by `anchor_lang::prelude::Account<'info, VaultState>: anchor_lang::ToAccountMetas`
+note: the traits `anchor_lang::AccountDeserialize` and `anchor_lang::AccountSerialize` must be implemented
+  --> src/lib.rs:342:1
+   = note: this error originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `VaultState` with `#[derive(Clone)]`
+  --> programs/anchor_vault/src/lib.rs:12:1
+   |
+12 + #[derive(Clone)]
+13 | pub struct VaultState {
+   |
+
+Some errors have detailed explanations: E0277, E0599.
+For more information about an error, try `rustc --explain E0277`.
+warning: `anchor_vault` (lib) generated 1 warning
+error: could not compile `anchor_vault` (lib) due to 46 previous errors; 1 warning emitted
