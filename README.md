@@ -1,4 +1,4 @@
-Here's a professional, comprehensive `README.md` tailored for your Anchor Vault Program repository at `https://github.com/oiskenderov/anchor_vault.git`:
+Anchor Vault Program repository at `https://github.com/oiskenderov/anchor_vault.git`:
 
 ```markdown
 # 🔒 Anchor Vault Program
@@ -169,33 +169,6 @@ describe("anchor_vault", () => {
   });
 });
 ```
-
----
-
-## 📁 Repository Structure
-
-```
-anchor_vault/
-├── programs/
-│   └── anchor_vault/
-│       ├── src/
-│       │   └── lib.rs          # Vault program implementation
-│       ├── Cargo.toml
-│       └── Xargo.toml
-├── tests/
-│   └── vault.ts                # Comprehensive instruction tests
-├── migrations/                 # Deployment scripts
-├── screenshots/                # Test results screenshots
-│   └── tests-passing.png
-├── Anchor.toml                 # Anchor configuration
-├── Cargo.toml                  # Rust dependencies
-├── package.json                # Node.js dependencies
-├── tsconfig.json               # TypeScript config
-└── LICENSE                     # MIT License
-```
-
----
-
 ## 🚀 Usage Example
 
 ```typescript
